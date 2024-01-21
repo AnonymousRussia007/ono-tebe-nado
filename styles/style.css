@@ -48,6 +48,15 @@ body {
   text-decoration: none;
 }
 
+.circle {
+  -moz-border-radius: 50px/50px;
+  -webkit-border-radius: 50px 50px;
+  border-radius: 50px/50px;
+  border: solid 1px var(--black);
+  width: 7px;
+  height: 7px;
+}
+
 .header__logo {
   display: flex;
   position: relative;
