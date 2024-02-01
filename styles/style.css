@@ -17,7 +17,7 @@ body {
 /* Шапка сайта (header) */
 .header__menu {
   display: grid;
-  grid-template-columns: 267px 150px 266px;
+  grid-template-columns: 1fr 150px 1fr;
   justify-content: space-between;
   align-items: center;
   padding: 94px 24px;
@@ -26,15 +26,15 @@ body {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 12px;
-  list-style: none;
+  gap: 31px;
   position: relative;
-  padding: 26px;
+  padding-left: 26px;
 }
 
 .nav-list__item {
   font-size: 18px;
   letter-spacing: 0.18px;
+  list-style-type: circle;
 }
 
 .nav-list__link {
@@ -44,24 +44,24 @@ body {
   text-underline-offset: 5px;
 }
 
+.decoration--active__item {
+  list-style: none;
+}
+
 .nav-list__link--active {
   text-decoration: none;
 }
 
-.circle {
-  -moz-border-radius: 50px/50px;
-  -webkit-border-radius: 50px 50px;
-  border-radius: 50px/50px;
-  border: solid 1px var(--black);
-  width: 7px;
-  height: 7px;
-}
-
 .header__logo {
   display: flex;
-  position: relative;
   width: 150px;
   height: 105px;
+}
+
+.header__menu address {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto auto 184px;
 }
 
 .address {
@@ -224,6 +224,7 @@ body {
   text-underline-offset: 4px;
   text-transform: uppercase;
   margin: 51px 40px auto;
+  z-index: 2;
 }
 
 .lots__cards p {
@@ -231,6 +232,7 @@ body {
   font-weight: 400;
   line-height: 120%; /* 24px */
   margin: auto 40px 48px;
+  z-index: 2;
 }
 
 .cards-1 {
@@ -239,20 +241,16 @@ body {
 
 .card-size {
   position: relative;
-  width: 334px;
-  min-height: 563px;
   margin: 27px 0.2px auto;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
-.card-size h3,
-p {
-  position: relative;
-  z-index: 2;
+.card-size a {
+  min-height: 563px;
+  margin: auto;
+  flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .cards-2 {
@@ -264,65 +262,48 @@ p {
 }
 
 /* Секция about */
+
 .about {
-  margin: 146px 24px auto;
   display: flex;
-  flex-direction: column;
 }
 
 .background-circle {
   background-color: var(--black);
   border-radius: 50%;
-  min-width: 240px;
+  width: 240px;
   min-height: 240px;
-  position: absolute;
-  margin: 37px auto auto 47px;
+  margin: 36px auto auto 71px;
 }
+
 .background-circle img {
   width: 148px;
   height: 114px;
   justify-content: center;
   align-items: center;
   margin: 64px auto auto 47px;
-  position: absolute;
 }
 
-.container__about {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.about__cards {
+  margin: 137px auto auto 43px;
 }
 
 .about__title {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
-  margin: 138px 44px auto auto;
+  text-align: left;
 }
 
 .about__text {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 688px;
+  margin: 100px auto auto;
   gap: 24px;
   font-size: 20px;
-}
-
-.about__text-1 {
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.2px;
-
-  flex-direction: column;
-  width: 688px;
-  margin: 100px 24px auto 359px;
-}
-
-.about__text-2 {
-  width: 690px;
-  position: relative;
-  left: 359px;
   line-height: 24px;
-  letter-spacing: normal;
 }
 
 /* Подвал сайта */
