@@ -20,7 +20,7 @@ body {
   grid-template-columns: 1fr 150px 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 94px 24px;
+  margin: 94px 50px;
 }
 
 .nav-list {
@@ -28,7 +28,6 @@ body {
   align-items: center;
   gap: 31px;
   position: relative;
-  padding-left: 26px;
 }
 
 .nav-list__item {
@@ -59,9 +58,7 @@ body {
 }
 
 .header__menu address {
-  display: flex;
-  flex-direction: column;
-  margin: auto auto auto 184px;
+  justify-self: end;
 }
 
 .address {
@@ -70,6 +67,7 @@ body {
   line-height: 24.3px; /* 135% */
   letter-spacing: 0.18px;
   min-width: 237px;
+  font-style: normal;
 }
 
 .address p {
